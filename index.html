@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Vehicle Movement Simulator — Frontend Intern Assignment</title>
+
+  <!--Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Vehicle Movement Simulator</h1>
+    <p class="subtitle">Frontend assignment — simulates a vehicle on a map (Leaflet + static JSON)</p>
+  </header>
+
+  <main>
+    <section id="map-area">
+      <div id="map"></div>
+      <div id="controls" class="controls">
+        <div class="controls-row">
+          <button id="playPauseBtn">Play</button>
+          <label for="speedSelect">Speed:</label>
+          <select id="speedSelect">
+            <option value="1">1x</option>
+            <option value="2">2x</option>
+            <option value="4">4x</option>
+          </select>
+          <button id="restartBtn">Restart</button>
+        </div>
+
+        <div class="status">
+          <div><strong>Current:</strong> <span id="currentCoord">—</span></div>
+          <div><strong>Elapsed:</strong> <span id="elapsed">00:00:00</span></div>
+          <div><strong>Speed:</strong> <span id="speed">— km/h</span></div>
+          <div><strong>Distance:</strong> <span id="distance">0 m</span></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <small>Frontend for Vehicle Movement on a Map "Intern assignment".</small>
+  </footer>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <script src="script.js"></script>
+</body>
+</html>
